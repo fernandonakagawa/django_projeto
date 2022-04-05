@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css"
+    href=
+    "{% static 'hello_world/site.css' %}"
+    />
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'home' %}" 
+        class="navbar-home">Início</a>
+        <a href="{% url 'sobre' %}"
+        class="navbar-item">Sobre</a>
+        <a href="{% url 'contato' %}"
+        class="navbar-item">Contato</a>
+        <a href="{% url 'mensagens' %}"
+        class="navbar-item">Mensagens</a>
+    </div>
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Olá mundo!!!</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css"
+    href=
+    "{% static 'hello_world/site.css' %}"
+    />
+</head>
+<body>
+    <span class = "destaque">Olá {{nome}}!</span>
+    <p>Seja bem-vindo! Hoje é {{data | date:"d/m/Y G:i:s:u"}}</p>
+    <p>{{data | date:"Y"}} não acabou ainda! Estamos na
+         {{data | date:"W"}}ª semana do ano! </p>
+</body>
+</html>

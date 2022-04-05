@@ -1,0 +1,30 @@
+{% extends "hello_world/layout.html" %}
+{% block title %}
+Mensagens
+{% endblock %}
+{% block content %}
+    <p>Mensagens enviadas:</p>
+    {% if message_list %}
+        <table class="message_list">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Mensagem</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for message in message_list %}
+                    <tr>
+                        <td>{{ message.log_data | date:'d m Y' }}</td>
+                        <td>{{ message.log_data | date:'H:i:s' }}</td>
+                        <td>{{ message.mensagem }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Não há mensagens para exibir.</p>
+    {% endif %}
+
+{% endblock %}
