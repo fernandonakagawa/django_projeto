@@ -8,6 +8,12 @@ from hello_world.models import LogMessage
 
 from django.views.generic import ListView
 
+from django.contrib.auth.forms import AuthenticationForm
+
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
+
 # Create your views here.
 def home(request):
     #return HttpResponse("<h1>Olá mundo!</h1>")
@@ -50,3 +56,8 @@ def ola(request, nome):
             'data': datetime.now(),
         }
     )
+
+class SignUpView(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy("login")
+    template_name = "registration/signup.html"

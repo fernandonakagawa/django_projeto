@@ -1,0 +1,13 @@
+{% extends "hello_world/layout.html" %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+<p>Login</p>
+<p>Efetue o seu login no sistema:</p>
+<form method = "POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+{% endblock %}

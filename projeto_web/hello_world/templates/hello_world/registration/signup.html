@@ -1,0 +1,12 @@
+{% extends "hello_world/layout.html" %}
+{% block title %}
+Registre-se
+{% endblock %}
+{% block content %}
+<p>Crie o seu cadastro</p>
+<form method = "POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrar</button>
+</form>
+{% endblock %}

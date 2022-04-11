@@ -21,5 +21,7 @@ import staticfiles_urlpatterns
 urlpatterns = [
     path("", include("hello_world.urls")),
     path('admin/', admin.site.urls),
+    path("accounts/", include("hello_world.urls")),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
 urlpatterns += staticfiles_urlpatterns()
