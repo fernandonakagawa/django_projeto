@@ -14,6 +14,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 
+from hello_world.forms import CadastroClientesForm
+
 # Create your views here.
 def home(request):
     #return HttpResponse("<h1>Olá mundo!</h1>")
@@ -61,3 +63,8 @@ class SignUpView(generic.CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
+
+class CadastroClientesView(generic.CreateView):
+    form_class = CadastroClientesForm
+    success_url = reverse_lazy("cadastro_clientes")
+    template_name = "cadastro_clientes.html"

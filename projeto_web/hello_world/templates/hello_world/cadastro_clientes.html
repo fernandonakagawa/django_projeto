@@ -1,0 +1,13 @@
+{% extends "hello_world/layout.html" %}
+{% block title %}
+Cadastro de Clientes
+{% endblock %}
+{% block content %}
+<p></p>
+<p>Cadastre o cliente:</p>
+<form method = "POST" class="cadastro_clientes">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <button type="submit" class="save btn btn-default">Enviar</button>
+</form>
+{% endblock %}

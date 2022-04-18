@@ -2,7 +2,7 @@ from django.urls import path
 from hello_world import views
 from hello_world.models import LogMessage
 
-from .views import SignUpView
+from .views import CadastroClientesView, SignUpView
 
 mensagens_list_view = views.MensagensListView.as_view(
     queryset=LogMessage.objects.order_by("-log_data")[:5],
@@ -18,4 +18,5 @@ urlpatterns = [
     path("contato/", views.contato, name="contato"),
     path("mensagens/", mensagens_list_view, name="mensagens"),
     path("signup/", SignUpView.as_view(), name="signup"),
+    path("cadastroclientes/", CadastroClientesView.as_view(), name = "cadastro_clientes"),
 ]

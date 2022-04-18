@@ -1,31 +1,47 @@
-.destaque{
+.destaque {
     font-weight: 700;
     color: steelblue;
 }
-.navbar{
+
+.navbar {
     background-color: lightslategrey;
     font-size: 1em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: aliceblue;
     padding: 5px;
 }
-.navbar a{
+
+.navbar a {
     text-decoration: none;
 }
-.navbar-home{
+
+.navbar-home {
     font-size: 1.2em;
 }
-.navbar-item{
+
+.navbar-item {
     font-size: 1.1em;
+    margin-right: 8px;
 }
-.body-content{
+
+.body-content {
     padding: 5px;
-    font-family: 'Courier New', Courier, monospace;
 }
-input[name=mensagem]{
+
+input[name=mensagem] {
     width: 75%;
 }
-.message_list th, td{
+
+.message_list th,
+td {
     text-align: left;
     padding-right: 15px;
+}
+
+.cadastroclientesform {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+}
+
+input[type=text]:focus {
+    border: 3px solid red;
 }
